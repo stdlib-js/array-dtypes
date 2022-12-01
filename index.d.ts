@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,29 +16,24 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var DTYPES = require( './dtypes.json' );
-
-
-// MAIN //
+import { DataType } from '@stdlib/types/array';
 
 /**
 * Returns a list of array data types.
 *
-* @returns {StringArray} list of array data types
+* @returns list of array data types
 *
 * @example
 * var list = dtypes();
 * // e.g., returns [ 'float32', 'float64', 'generic', 'int16', 'int32', 'int8', 'uint16', 'uint32', 'uint8', 'uint8c', 'complex64', 'complex128' ]
 */
-function dtypes() {
-	return DTYPES.slice();
-}
+declare function dtypes(): Array<DataType>;
 
 
 // EXPORTS //
 
-module.exports = dtypes;
+export = dtypes;
