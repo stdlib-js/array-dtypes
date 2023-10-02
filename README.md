@@ -45,43 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-dtypes
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-dtypes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-dtypes/tags). For example,
-
-```javascript
-dtypes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@v0.1.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var dtypes = require( 'path/to/vendor/umd/array-dtypes/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.dtypes;
-})();
-</script>
+var dtypes = require( '@stdlib/array-dtypes' );
 ```
 
 #### dtypes()
@@ -128,14 +115,9 @@ The output `array` contains the following data types:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-index-of@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var indexOf = require( '@stdlib/utils-index-of' );
+var dtypes = require( '@stdlib/array-dtypes' );
 
 var DTYPES = dtypes();
 var bool;
@@ -158,11 +140,6 @@ bool = isdtype( 'uint8' );
 
 bool = isdtype( 'beep' );
 // returns false
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -231,8 +208,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/array-dtypes.svg
 [npm-url]: https://npmjs.org/package/@stdlib/array-dtypes
 
-[test-image]: https://github.com/stdlib-js/array-dtypes/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/array-dtypes/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/array-dtypes/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/array-dtypes/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/array-dtypes/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/array-dtypes?branch=main
@@ -263,9 +240,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/array/typed-dtypes]: https://github.com/stdlib-js/array-typed-dtypes/tree/umd
+[@stdlib/array/typed-dtypes]: https://github.com/stdlib-js/array-typed-dtypes
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/umd
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
 
 <!-- </related-links> -->
 
