@@ -45,41 +45,33 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-dtypes
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-dtypes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@umd/browser.js' )
+var dtypes = require( '@stdlib/array-dtypes' );
 ```
 
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var dtypes = require( 'path/to/vendor/umd/array-dtypes/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.dtypes;
-})();
-</script>
-```
-
-#### dtypes()
+#### dtypes( \[kind] )
 
 Returns a list of array data types.
 
@@ -88,7 +80,7 @@ var out = dtypes();
 // e.g., returns [ 'float32', 'float64', 'generic', 'int16', 'int32', 'int8', 'uint16', 'uint32', 'uint8', 'uint8c', 'complex64', 'complex128' ]
 ```
 
-The output `array` contains the following data types:
+When not provided a data type "kind", the function returns an array containing the following data types:
 
 -   `float32`: single-precision floating-point numbers.
 -   `float64`: double-precision floating-point numbers.
@@ -102,6 +94,25 @@ The output `array` contains the following data types:
 -   `uint32`: unsigned 32-bit integers.
 -   `uint8`: unsigned 8-bit integers.
 -   `uint8c`: unsigned clamped 8-bit integers.
+
+To return the subset of data types belonging to a specified data type kind, provide a `kind` argument.
+
+```javascript
+var out = dtypes( 'floating_point' );
+// returns [...]
+```
+
+The function supports the following data type kinds:
+
+-   `floating_point`: floating-point data types.
+-   `real_floating_point`: real-valued floating-point data types.
+-   `complex_floating_point`: complex-valued floating-point data types.
+-   `integer`: integer data types.
+-   `signed_integer`: signed integer data types.
+-   `unsigned_integer`: unsigned integer data types.
+-   `real`: real-valued data types.
+-   `numeric`: numeric data types.
+-   `all`: all data types.
 
 </section>
 
@@ -123,17 +134,11 @@ The output `array` contains the following data types:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-index-of@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var indexOf = require( '@stdlib/utils-index-of' );
+var dtypes = require( '@stdlib/array-dtypes' );
 
 var DTYPES = dtypes();
-var bool;
 
 function isdtype( str ) {
     if ( indexOf( DTYPES, str ) === -1 ) {
@@ -142,7 +147,7 @@ function isdtype( str ) {
     return true;
 }
 
-bool = isdtype( 'float64' );
+var bool = isdtype( 'float64' );
 // returns true
 
 bool = isdtype( 'int16' );
@@ -153,11 +158,6 @@ bool = isdtype( 'uint8' );
 
 bool = isdtype( 'beep' );
 // returns false
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -258,9 +258,9 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/array/typed-dtypes]: https://github.com/stdlib-js/array-typed-dtypes/tree/umd
+[@stdlib/array/typed-dtypes]: https://github.com/stdlib-js/array-typed-dtypes
 
-[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes/tree/umd
+[@stdlib/ndarray/dtypes]: https://github.com/stdlib-js/ndarray-dtypes
 
 <!-- </related-links> -->
 
