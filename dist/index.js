@@ -1,5 +1,5 @@
-"use strict";var e=function(u,t){return function(){return t||u((t={exports:{}}).exports,t),t.exports}};var i=e(function(p,c){c.exports=["float32","float64","generic","int16","int32","int8","uint16","uint32","uint8","uint8c","complex64","complex128"]});var n=e(function(x,r){
-var s=i();function o(){return s.slice()}r.exports=o
-});var a=n();module.exports=a;
+"use strict";var n=function(t,i){return function(){return i||t((i={exports:{}}).exports,i),i.exports}};var e=n(function(p,r){r.exports={all:["complex64","complex128","float32","float64","generic","int16","int32","int8","uint16","uint32","uint8","uint8c"],floating_point:["complex64","complex128","float32","float64"],real_floating_point:["float32","float64"],complex_floating_point:["complex64","complex128"],integer:["int16","int32","int8","uint16","uint32","uint8","uint8c"],signed_integer:["int16","int32","int8"],unsigned_integer:["uint16","uint32","uint8","uint8c"],real:["float32","float64","int16","int32","int8","uint16","uint32","uint8","uint8c"],numeric:["complex64","complex128","float32","float64","int16","int32","int8","uint16","uint32","uint8","uint8c"]}});var o=n(function(m,l){
+var u=e();function a(){var t;return arguments.length===0?u.all.slice():(t=u[arguments[0]],t?t.slice():[])}l.exports=a
+});var c=o();module.exports=c;
 /** @license Apache-2.0 */
 //# sourceMappingURL=index.js.map
