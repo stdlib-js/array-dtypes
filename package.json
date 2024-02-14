@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "@stdlib/string-base-replace": "^0.2.0",
-    "@stdlib/types": "^0.3.1"
+    "@stdlib/types": "^0.3.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/assert-is-string-array": "^0.1.1",
