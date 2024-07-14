@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-06-13)
+## Unreleased (2024-07-14)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`1cba41b`](https://github.com/stdlib-js/stdlib/commit/1cba41b45734d186a349d7987028307144faf4a3) - **docs:** update examples _(by Athan Reines)_
 -   [`c417923`](https://github.com/stdlib-js/stdlib/commit/c4179233cb2de5ffaa8c59b3910e14de12414483) - **feat:** add boolean dtype support in `array/dtypes` [(#2307)](https://github.com/stdlib-js/stdlib/pull/2307) _(by Jaysukh Makvana, Athan Reines)_
 
 </details>
