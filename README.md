@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@esm/index.mjs';
+import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@v0.3.0-esm/index.mjs';
 ```
 
 #### dtypes( \[kind] )
@@ -135,7 +135,7 @@ var out = dtypes( 'floating_point_and_generic' );
 <script type="module">
 
 var contains = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-assert-contains' ).factory;
-import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@esm/index.mjs';
+import dtypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-dtypes@v0.3.0-esm/index.mjs';
 
 var isdtype = contains( dtypes() );
 
