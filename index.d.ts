@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,26 +16,17 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var replace = require( '@stdlib/string-base-replace' );
-var DTYPES = require( './dtypes.json' );
-
-
-// VARIABLES //
-
-var RE_SUFFIX = /_and_generic$/;
-
-
-// MAIN //
+import { DataType, DataTypeKind } from '@stdlib/types/array';
 
 /**
 * Returns a list of array data types.
 *
-* @param {string} [kind] - data type kind
-* @returns {StringArray} list of array data types
+* @param kind - data type kind
+* @returns list of array data types
 *
 * @example
 * var list = dtypes();
@@ -45,30 +36,9 @@ var RE_SUFFIX = /_and_generic$/;
 * var list = dtypes( 'floating_point' );
 * // returns [...]
 */
-function dtypes() {
-	var kind;
-	var out;
-	var FLG;
-	if ( arguments.length === 0 ) {
-		return DTYPES.all.slice();
-	}
-	FLG = false;
-	kind = arguments[ 0 ];
-	if ( RE_SUFFIX.test( kind ) ) {
-		kind = replace( kind, RE_SUFFIX, '' );
-		if ( kind !== 'all' ) {
-			FLG = true;
-		}
-	}
-	out = DTYPES[ kind ];
-	out = ( out ) ? out.slice() : [];
-	if ( FLG && out.length > 0 ) {
-		out.push( 'generic' );
-	}
-	return out;
-}
+declare function dtypes( kind?: DataTypeKind ): Array<DataType>;
 
 
 // EXPORTS //
 
-module.exports = dtypes;
+export = dtypes;
