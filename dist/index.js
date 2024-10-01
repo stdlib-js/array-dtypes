@@ -1,6 +1,0 @@
-"use strict";var e=function(i,t){return function(){return t||i((t={exports:{}}).exports,t),t.exports}};var l=e(function(m,c){c.exports={all:["bool","complex64","complex128","float32","float64","generic","int16","int32","int8","uint16","uint32","uint8","uint8c"],typed:["bool","complex64","complex128","float32","float64","int16","int32","int8","uint16","uint32","uint8","uint8c"],floating_point:["complex64","complex128","float32","float64"],real_floating_point:["float32","float64"],complex_floating_point:["complex64","complex128"],boolean:["bool"],integer:["int16","int32","int8","uint16","uint32","uint8","uint8c"],signed_integer:["int16","int32","int8"],unsigned_integer:["uint16","uint32","uint8","uint8c"],real:["float32","float64","int16","int32","int8","uint16","uint32","uint8","uint8c"],numeric:["complex64","complex128","float32","float64","int16","int32","int8","uint16","uint32","uint8","uint8c"]}});var r=e(function(x,a){
-var f=require('@stdlib/string-base-replace/dist'),o=l(),u=/_and_generic$/;function p(){var i,t,n;return arguments.length===0?o.all.slice():(n=!1,i=arguments[0],u.test(i)&&(i=f(i,u,""),i!=="all"&&(n=!0)),t=o[i],t=t?t.slice():[],n&&t.length>0&&t.push("generic"),t)}a.exports=p
-});var s=r();module.exports=s;
-/** @license Apache-2.0 */
-/** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
