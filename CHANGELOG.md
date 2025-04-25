@@ -2,6 +2,50 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2025-04-25)
+
+<section class="features">
+
+### Features
+
+-   [`5edbc25`](https://github.com/stdlib-js/stdlib/commit/5edbc2524bf509bd0bbde5c6432c77f06e55a65d) - add index data type kinds
+
+</section>
+
+<!-- /.features -->
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`5edbc25`](https://github.com/stdlib-js/stdlib/commit/5edbc2524bf509bd0bbde5c6432c77f06e55a65d) - **feat:** add index data type kinds _(by Athan Reines)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Athan Reines
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.0">
 
 ## 0.3.0 (2024-07-28)
