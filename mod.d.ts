@@ -16,19 +16,29 @@
 * limitations under the License.
 */
 
-import dtypes = require( './index' );
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { DataType, DataTypeKind } from '@stdlib/types/array';
+
+/**
+* Returns a list of array data types.
+*
+* @param kind - data type kind
+* @returns list of array data types
+*
+* @example
+* var list = dtypes();
+* // e.g., returns [ 'float32', 'float64', ... ]
+*
+* @example
+* var list = dtypes( 'floating_point' );
+* // returns [...]
+*/
+declare function dtypes( kind?: DataTypeKind ): Array<DataType>;
 
 
-// TESTS //
+// EXPORTS //
 
-// The function returns an array of data types...
-{
-	dtypes(); // $ExpectType DataType[]
-	dtypes( 'floating_point' ); // $ExpectType DataType[]
-	dtypes( 'floating_point_and_generic' ); // $ExpectType DataType[]
-}
-
-// The compiler throws an error if the function is provided an unsupported number of arguments...
-{
-	dtypes( 'floating_point', 2 ); // $ExpectError
-}
+export = dtypes;
