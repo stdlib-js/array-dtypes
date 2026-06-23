@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-06-13)
+## Unreleased (2026-06-23)
+
+<section class="features">
+
+### Features
+
+-   [`b4e4ef2`](https://github.com/stdlib-js/stdlib/commit/b4e4ef2ab4b4818c248e41bedf68f2ff5c3dbcce) - add float16 datatype support in `array/dtypes` [(#9809)](https://github.com/stdlib-js/stdlib/pull/9809)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`b4e4ef2`](https://github.com/stdlib-js/stdlib/commit/b4e4ef2ab4b4818c248e41bedf68f2ff5c3dbcce) - **feat:** add float16 datatype support in `array/dtypes` [(#9809)](https://github.com/stdlib-js/stdlib/pull/9809) _(by Gururaj Gurram, Athan Reines)_
 -   [`00885d3`](https://github.com/stdlib-js/stdlib/commit/00885d3e6afd8118ce2b6e5f7a1c544d5b6d4ffb) - **bench:** refactor to use string interpolation in `array` [(#11411)](https://github.com/stdlib-js/stdlib/pull/11411) _(by Karan Anand, Athan Reines)_
 
 </details>
@@ -24,9 +35,10 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Gururaj Gurram
 -   Karan Anand
 
 </section>
